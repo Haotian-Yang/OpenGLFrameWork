@@ -6,6 +6,9 @@ add_executable(main src/main.cpp)
 # set_property(TARGET main PROPERTY CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "-g -std=c++11 -Wformat")
 
+set(MAIN_PATH ${PROJECT_SOURCE_DIR})
+configure_file("${CMAKE_CURRENT_SOURCE_DIR}/src/project_path.hpp.in" "${CMAKE_CURRENT_SOURCE_DIR}/src/project_path.hpp")
+
 # set_property(TARGET main PROPERTY CXX_STANDARD 11)
 target_compile_options(main PRIVATE -Wall)
 
